@@ -25,3 +25,13 @@ $ nest g s
 수동import는 하지 않음.
 요청을 할 뿐.
 
+DTO : Data Transfer Object
+타입이 어플리케이션이 움직일 때도 도움을 준다.
+코드를 더욱 간결하게 만들어 주기도 하고
+들어오는 쿼리에 대해 유효성 검사를 해주기도 함.
+
+DTO 사용을 위해선 class-validator, class-transformer 설치해야 함.
+
+또한 @nestjs/mapped-types
+: 타입을 변환시키고 사용할 수 있게 해주는 패키지
+도 설치해야.
