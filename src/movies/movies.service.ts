@@ -1,4 +1,4 @@
-import { Injectable, NotFoundException } from '@nestjs/common';
+import { Injectable, NotFoundException, Req, Res } from '@nestjs/common';
 import { CreateMovieDto } from './dto/create-movie.dto';
 import { UpdateMovieDto } from './dto/update-movie.dto';
 import { Movie } from './entities/movie.entity';
@@ -8,6 +8,8 @@ import { Movie } from './entities/movie.entity';
 export class MoviesService {
   private movies: Movie[] = [];
 
+  // 여기 괄호 안에 @Req() req, @Res() res 넣어주면
+  // 익스프레스처럼 req, res 사용가능하지만 좋지 않은 방법임.
   getAll(): Movie[] {
     return this.movies;
   }

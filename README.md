@@ -35,3 +35,22 @@ DTO 사용을 위해선 class-validator, class-transformer 설치해야 함.
 또한 @nestjs/mapped-types
 : 타입을 변환시키고 사용할 수 있게 해주는 패키지
 도 설치해야.
+
+
+app.module은 원래 appcontroller랑 appprovider만가지고있어야함. 바로 moviecontroller, movieprovider가 나와선 안됨.
+
+```bash
+nest g mo
+```
+
+로 모듈 생성.
+
+```bash
+nest g co
+```
+친 다음에 app이라는 컨트롤러 생성.
+app.controller.ts만 밖으로 빼주고 나머지는 삭제.
+
+nest는 기본적으로 express 위에서 돌아감.
+fastify에서 돌아가도록 할 수도 있음.
+
