@@ -38,6 +38,6 @@ export class MoviesController {
 
   @Patch(':id')
   patch(@Param('id') movieId: number, @Body() updateData: UpdateMovieDto) {
-    return this.moviesService.update(movieId, updateData); // 유효성 검사 필요.
+    return this.moviesService.update(movieId, updateData);
   }
 }
